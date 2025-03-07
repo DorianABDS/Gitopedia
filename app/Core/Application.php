@@ -19,6 +19,7 @@
 namespace App\Core;
 
 use App\Middleware\MiddlewareInterface;
+use App\Core\ServiceContainer;
 
 class Application
 {
@@ -342,6 +343,74 @@ class Application
     }
     
     /**
+     * Charge les entités de domaine et les services
+     * 
+     * Cette méthode est appelée pendant l'initialisation de l'application
+     * pour s'assurer que les entités de domaine et les services sont disponibles.
+     * 
+     * Avec l'autoloader PSR-4, cette méthode devient plus simple car elle n'a pas
+     * besoin de charger explicitement chaque fichier - l'autoloader s'en charge
+     * automatiquement lorsqu'une classe est référencée pour la première fois.
+     * 
+     * Cette méthode a principalement un rôle de vérification de l'existence
+     * des dossiers de domaine et services, pour éviter des erreurs pendant
+     * le fonctionnement de l'application.
+     * 
+     * @return self Retourne l'instance de l'application pour permettre le chaînage
+     */
+    public function loadDomain(): self
+    {
+        // Vérifier si les dossiers existent
+        $domainPath = ROOT_PATH . '/app/Domain';
+        $servicesPath = ROOT_PATH . '/app/Services';
+        
+        // Vérifier l'existence du dossier de domaine
+        if (!is_dir($domainPath)) {
+            // Créer le dossier si nécessaire ou journaliser un avertissement
+            if (defined('DEBUG_MODE') && DEBUG_MODE) {
+                error_log("Le dossier Domain n'existe pas: $domainPath");
+            }
+        }
+        
+        // Vérifier l'existence du dossier de services
+        if (!is_dir($servicesPath)) {
+            // Créer le dossier si nécessaire ou journaliser un avertissement
+            if (defined('DEBUG_MODE') && DEBUG_MODE) {
+                error_log("Le dossier Services n'existe pas: $servicesPath");
+            }
+        }
+        
+        return $this;
+    }
+
+    /**
+     * Charge le dossier Services et vérifie son existence
+     * 
+     * Cette méthode est appelée pendant l'initialisation de l'application
+     * pour s'assurer que les services sont disponibles.
+     * 
+     * Avec l'autoloader PSR-4, cette méthode a principalement un rôle 
+     * de vérification de l'existence du dossier Services.
+     * 
+     * @return self Retourne l'instance de l'application pour permettre le chaînage
+     */
+    public function loadServices(): self
+    {
+        // Vérifier si le dossier Services existe
+        $servicesPath = ROOT_PATH . '/app/Services';
+        
+        // Vérifier l'existence du dossier de services
+        if (!is_dir($servicesPath)) {
+            // Journaliser un avertissement en mode debug
+            if (defined('DEBUG_MODE') && DEBUG_MODE) {
+                error_log("Le dossier Services n'existe pas: $servicesPath");
+            }
+        }
+        
+        return $this;
+    }
+    
+    /**
      * Enregistre un module dans l'application
      * 
      * Cette méthode effectue plusieurs opérations importantes :
@@ -372,11 +441,11 @@ class Application
             'path' => $path
         ];
         
-        // Charger les contrôleurs du module
-        $this->loadModuleControllers($name, $path);
-        
         // Charger les routes du module
         $this->loadModuleRoutes($name, $path);
+
+        // Charger les services du module
+        $this->loadModuleServices($name, $path);
         
         return $this;
     }
@@ -453,6 +522,19 @@ class Application
             require $routerFile;
         }
     }
+
+    private function loadModuleServices(string $moduleName, string $modulePath): void
+    {
+        $servicesFile = $modulePath . '/services.php';
+        
+        if (file_exists($servicesFile)) {
+            $registerServices = require $servicesFile;
+            
+            if (is_callable($registerServices)) {
+                $registerServices();
+            }
+        }
+    }
     
     /**
      * Exécute l'application - Point d'entrée principal du framework
@@ -481,6 +563,10 @@ class Application
     {
         // Charger tous les modules disponibles
         $this->loadModules();
+
+        // Charger le domaine et les services
+        $this->loadDomain();
+        $this->loadServices();
         
         // Récupérer l'URI et la méthode HTTP de la requête entrante
         $uri = $this->request->getUri();
@@ -737,5 +823,24 @@ class Application
         // Utilise l'opérateur de coalescence null (??) pour retourner une valeur par défaut
         // si $this->sharedViewsPath n'est pas défini
         return $this->sharedViewsPath ?? ROOT_PATH . '/assets/templates';
+    }
+
+    /**
+     * Récupère un service depuis le container
+     * 
+     * Cette méthode permet d'accéder facilement aux services enregistrés
+     * depuis n'importe quel point de l'application qui a accès à l'instance App.
+     * 
+     * Exemple d'utilisation:
+     * $app = Application::getInstance();
+     * $userService = $app->getService('App\\Services\\User\\UserService');
+     * $user = $userService->getUserById(1);
+     * 
+     * @param string $serviceId Identifiant du service à récupérer
+     * @return mixed Instance du service demandé
+     */
+    public function getService(string $serviceId)
+    {
+        return ServiceContainer::resolve($serviceId);
     }
 }
