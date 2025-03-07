@@ -20,6 +20,8 @@
 
 namespace App\Core;
 
+use App\Core\ServiceContainer;
+
 class Controller
 {
     /**
@@ -374,5 +376,29 @@ class Controller
         
         // Si le format ne correspond pas à la convention, lever une exception
         throw new \Exception("Impossible de déterminer le module à partir de la classe '$className'");
+    }
+    
+    /**
+     * Récupère un service depuis le container
+     * 
+     * Cette méthode utilitaire permet d'accéder facilement aux services
+     * enregistrés depuis n'importe quel contrôleur. Elle utilise le
+     * ServiceContainer pour résoudre les dépendances automatiquement.
+     * 
+     * Exemples d'utilisation:
+     * 
+     * // Accès au service utilisateur
+     * $userService = $this->getService('App\\Services\\User\\UserService');
+     * $user = $userService->getUserById($id);
+     * 
+     * // Ou avec un alias plus court (si défini dans services.php)
+     * $userService = $this->getService('user');
+     * 
+     * @param string $serviceId Identifiant du service à récupérer
+     * @return mixed Instance du service demandé
+     */
+    protected function getService(string $serviceId)
+    {
+        return ServiceContainer::resolve($serviceId);
     }
 }

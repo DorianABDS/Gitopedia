@@ -1,0 +1,46 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Gitopedia CLI - Outil en ligne de commande du framework HMVC
+ * 
+ * Ce script est le point d'entrée pour toutes les commandes CLI du framework.
+ * Il initialise l'environnement, charge les dépendances nécessaires, puis
+ * passe le contrôle au CommandRunner qui exécutera la commande demandée.
+ * 
+ * Usage: php gitopedia <commande> [options] [arguments]
+ * 
+ * Exemples:
+ *   php gitopedia make:module Blog
+ *   php gitopedia make:module User --resource --model
+ *   php gitopedia help
+ */
+
+use App\CLI\CommandRunner;
+
+// Définir le chemin racine du projet
+define('ROOT_PATH', __DIR__);
+
+// Charger les fichiers de configuration
+require_once ROOT_PATH . '/config/config.php';
+if (file_exists(ROOT_PATH . '/config/database.php')) {
+    require_once ROOT_PATH . '/config/database.php';
+}
+
+// Charger les classes CLI de base
+require_once ROOT_PATH . '/app/CLI/Command.php';
+require_once ROOT_PATH . '/app/CLI/CommandRunner.php';
+
+// Charger toutes les commandes disponibles
+foreach (glob(ROOT_PATH . '/app/CLI/*.php') as $file) {
+    $className = basename($file, '.php');
+    if ($className !== 'Command' && $className !== 'CommandRunner') {
+        require_once $file;
+    }
+}
+
+// Initialiser et exécuter le CommandRunner
+$runner = new CommandRunner();
+$exitCode = $runner->run($argv);
+
+// Retourner le code de sortie au shell
+exit($exitCode);

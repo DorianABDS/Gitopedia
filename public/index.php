@@ -9,7 +9,7 @@
  * Ce fichier remplit plusieurs fonctions fondamentales :
  * - Définition des constantes essentielles (ROOT_PATH)
  * - Chargement des fichiers de configuration
- * - Inclusion des classes de base du framework
+ * - Configuration de l'autoloader PSR-4
  * - Initialisation et démarrage de l'application
  * 
  * Dans l'architecture HMVC, ce fichier représente le niveau supérieur de la
@@ -33,6 +33,51 @@
 define('ROOT_PATH', dirname(__DIR__));
 
 // -----------------------------------------------------------------------------
+// CONFIGURATION DE L'AUTOLOADER PSR-4
+// -----------------------------------------------------------------------------
+/**
+ * Enregistrement de l'autoloader PSR-4
+ * 
+ * L'autoloader PSR-4 est un standard PHP qui définit comment les classes
+ * doivent être chargées automatiquement à partir de leur namespace.
+ * 
+ * Avantages :
+ * - Charge les classes uniquement lorsqu'elles sont nécessaires
+ * - Élimine les problèmes d'ordre de chargement des dépendances
+ * - Simplifie la gestion des inclusions de fichiers
+ * - Suit les standards modernes de l'écosystème PHP
+ * 
+ * Structure de correspondance :
+ * - Namespace App\Core\... => app/Core/...
+ * - Namespace App\Modules\... => app/Modules/...
+ * - Namespace App\Domain\... => app/Domain/...
+ * - Namespace App\Services\... => app/Services/...
+ */
+spl_autoload_register(function ($class) {
+    // Préfixe de namespace de base pour l'application
+    $prefix = 'App\\';
+    $base_dir = ROOT_PATH . '/app/';
+    
+    // Vérifier si la classe utilise le préfixe de notre application
+    $len = strlen($prefix);
+    if (strncmp($prefix, $class, $len) !== 0) {
+        return; // Si non, quitter et laisser d'autres autoloaders s'en charger
+    }
+    
+    // Récupérer le chemin relatif à partir du namespace
+    $relative_class = substr($class, $len);
+    
+    // Remplacer les séparateurs de namespace (\) par des séparateurs de répertoire (/)
+    // et ajouter .php à la fin pour obtenir le chemin du fichier
+    $file = $base_dir . str_replace('\\', '/', $relative_class) . '.php';
+    
+    // Si le fichier existe, le charger
+    if (file_exists($file)) {
+        require $file;
+    }
+});
+
+// -----------------------------------------------------------------------------
 // CHARGEMENT DES CONFIGURATIONS
 // -----------------------------------------------------------------------------
 /**
@@ -47,46 +92,6 @@ require_once ROOT_PATH . '/config/config.php';
 require_once ROOT_PATH . '/config/database.php';
 
 // -----------------------------------------------------------------------------
-// CHARGEMENT DES CLASSES DU FRAMEWORK
-// -----------------------------------------------------------------------------
-/**
- * Inclure les classes fondamentales du framework HMVC
- * 
- * Chaque classe représente un composant essentiel de l'architecture :
- * - Application : Point central qui orchestre tous les composants
- * - Router : Gestion du routage des requêtes vers les contrôleurs
- * - Request : Encapsulation des données de la requête HTTP
- * - Response : Construction et envoi de la réponse HTTP
- * - Layout : Gestion des templates et rendus de page
- * - Controller : Classe de base pour tous les contrôleurs
- * - Model : Classe de base pour tous les modèles
- * - Database : Abstraction des interactions avec la base de données
- * 
- * Note : Dans un système plus avancé, ces inclusions seraient remplacées
- * par un autoloader PSR-4, mais l'approche explicite est utilisée ici
- * pour des raisons pédagogiques.
- */
-require_once ROOT_PATH . '/app/Core/Application.php';
-require_once ROOT_PATH . '/app/Core/Router.php';
-require_once ROOT_PATH . '/app/Core/Request.php';
-require_once ROOT_PATH . '/app/Core/Response.php';
-require_once ROOT_PATH . '/app/Core/Layout.php';
-require_once ROOT_PATH . '/app/Core/Controller.php';
-require_once ROOT_PATH . '/app/Core/Model.php';
-require_once ROOT_PATH . '/app/Core/Database.php';
-
-// -----------------------------------------------------------------------------
-// CHARGEMENT DES INTERFACES ET MIDDLEWARES
-// -----------------------------------------------------------------------------
-/**
- * Inclure les interfaces et classes de middleware
- * 
- * Les middlewares permettent d'intercepter et de traiter les requêtes
- * avant qu'elles n'atteignent les contrôleurs (authentification, validation, etc.)
- */
-require_once ROOT_PATH . '/app/Middleware/MiddlewareInterface.php';
-
-// -----------------------------------------------------------------------------
 // INITIALISATION DE L'APPLICATION
 // -----------------------------------------------------------------------------
 /**
@@ -96,6 +101,15 @@ require_once ROOT_PATH . '/app/Middleware/MiddlewareInterface.php';
  * et gère le cycle de vie complet de la requête HTTP.
  */
 $app = new App\Core\Application();
+
+/**
+ * Initialiser les services de l'application
+ * 
+ * Cette étape enregistre tous les services définis dans services.php
+ * auprès du container d'injection de dépendances.
+ */
+$initServices = require_once ROOT_PATH . '/app/services.php';
+$initServices();
 
 // -----------------------------------------------------------------------------
 // CONFIGURATION DE BASE
