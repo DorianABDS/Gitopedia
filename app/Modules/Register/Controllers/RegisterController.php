@@ -17,9 +17,11 @@ class RegisterController extends Controller
     {
         $email = $this->request->post('email');
         $password_hash = password_hash($this->request->post('password'), PASSWORD_DEFAULT);
+
+        return '';
     }
 
-    protected function IsValidCredentials($email, $password_hash)
+    protected function IsValidCredentials($email, $password_hash): bool
     {
         $credentials = array($email, $password_hash);
 
