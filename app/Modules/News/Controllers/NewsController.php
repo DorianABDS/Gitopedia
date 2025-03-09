@@ -2,16 +2,15 @@
 
 namespace App\Modules\News\Controllers;
 
+use App\Core\Application;
 use App\Core\Controller;
-
-require_once ROOT_PATH . '/app/Modules/News/Models/NewsModel.php';
 use App\Modules\News\Models\NewsModel;
 
 class NewsController extends Controller 
 {
     protected NewsModel $newsModel;
 
-    public function __construct(\App\Core\Application $app) 
+    public function __construct(Application $app) 
     {
         parent::__construct($app);
         
