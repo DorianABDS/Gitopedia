@@ -101,3 +101,4 @@ class PasswordHasher
             'cost' => self::$hashCost
         ]);
     }
+}
