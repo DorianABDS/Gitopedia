@@ -37,27 +37,28 @@
     <?php endif; ?>
 </head>
 
-<header class="bg-[#303034] h-16 flex items-center justify-between md:px-12">
-  <div class="flex items-center gap-2">
-    <img src="logo.png" alt="Logo Git" class="h-8" />
-    <span class="text-xl font-bold text-white">Gitopedia</span>
-  </div>
+<body class="font-[Montserrat]">
+  <header class="bg-[#303034] text-white px-4 sm:px-6 lg:px-12 py-6">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
 
-  <nav>
-    <ul class="flex gap-6 text-white">
-      <li><a href="/" class="hover:underline">Accueil</a></li>
-      <li><a href="/actualite" class="hover:underline">Actualité</a></li>
-      <li><a href="/a-propos" class="hover:underline">À propos</a></li>
-      <li><a href="/documentation" class="hover:underline">Documentation</a></li>
-    </ul>
-  </nav>
+      <div class="md:col-span-4 flex items-center gap-3">
+        <img src="logo.png" alt="Logo Git" class="h-8" />
+        <span class="text-xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent">Gitopedia</span>
+      </div>
 
-  <div class="flex items-center gap-3">
-    <button class="bg-white text-[#303034] px-3 py-1 rounded">Connexion</button>
-    <button class="bg-white text-[#303034] px-3 py-1 rounded">Inscription</button>
-  </div>
-</header>
+      <nav class="md:col-span-4">
+        <ul class="flex flex-col md:flex-row justify-center items-start md:items-center gap-3 md:gap-6 text-base font-semibold">
+          <li><a href="/" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Accueil</a></li>
+          <li><a href="/actualite" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Actualité</a></li>
+          <li><a href="/documentation" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Documentation</a></li>
+          <li><a href="/a-propos" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">À propos</a></li>
+        </ul>
+      </nav>
 
+      <div class="md:col-span-4 flex justify-start md:justify-end gap-3 text-base">
+        <button class="bg-[#303034] text-[#fff] font-bold px-4 py-1.5 rounded">Connexion</button>
+        <button class="bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] text-[#303034] font-bold px-4 rounded">Inscription</button>
+      </div>
 
-<body>
-    <!-- Le contenu de la page sera inséré ici, suivi par footer.php -->
+    </div>
+  </header>
