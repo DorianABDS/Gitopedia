@@ -28,7 +28,7 @@
         <div class="grid gap-12 grid-cols-1 md:grid-cols-12 mb-20">
             <div class="md:col-span-4 flex flex-col items-center md:items-start text-center md:text-left">
                 <div class="flex items-center mb-2">
-                    <img src="assets/img/logoGitpedia.png" alt="Logo Gitopedia" class="mx-3" />
+                    <img src="assets/img/logoGitpedia.png" alt="Logo Git" class="mx-3" />
                     <h5 class="text-2xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent">Gitopedia</h5>
                 </div>
                 <p>Parce que git <code>`commit -m 'help'`</code> ne fonctionne pas.</p>
