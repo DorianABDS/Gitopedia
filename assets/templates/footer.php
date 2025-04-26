@@ -38,40 +38,40 @@
                 <div class="flex flex-col gap-2">
                     <h5 class="text-xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent">Ressources</h5>
                     <ul class="space-y-2">
-                        <li><a href="/" class="text-white no-underline hover:underline">Accueil</a></li>
-                        <li><a href="/actualite" class="text-white no-underline hover:underline">Actualité</a></li>
-                        <li><a href="/documentation" class="text-white no-underline hover:underline">Documentation</a></li>
-                        <li><a href="/contact" class="text-white no-underline hover:underline">À propos</a></li>
+                        <li><a href="/" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Accueil</a></li>
+                        <li><a href="/actualite" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Actualité</a></li>
+                        <li><a href="/documentation" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Documentation</a></li>
+                        <li><a href="/contact" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">À propos</a></li>
                     </ul>
                 </div>
 
                 <div class="flex flex-col gap-2">
                     <h5 class="text-xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent">Niveaux</h5>
                     <ul class="space-y-2">
-                        <li><a href="/debutant" class="text-white no-underline hover:underline">Débutant</a></li>
-                        <li><a href="/intermediaire" class="text-white no-underline hover:underline">Intermédiaire</a></li>
-                        <li><a href="/avance" class="text-white no-underline hover:underline">Avancé</a></li>
-                        <li><a href="/expert" class="text-white no-underline hover:underline">Expert</a></li>
+                        <li><a href="/debutant" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Débutant</a></li>
+                        <li><a href="/intermediaire" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Intermédiaire</a></li>
+                        <li><a href="/avance" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Avancé</a></li>
+                        <li><a href="/expert" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Expert</a></li>
                     </ul>
                 </div>
 
                 <div class="flex flex-col gap-2">
                     <h5 class="text-xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent">Communauté</h5>
                     <ul class="space-y-2">
-                        <li><a href="/github" class="text-white no-underline hover:underline">GitHub</a></li>
-                        <li><a href="/discord" class="text-white no-underline hover:underline">Discord</a></li>
-                        <li><a href="/contribuer" class="text-white no-underline hover:underline">Contribuer</a></li>
-                        <li><a href="/faq" class="text-white no-underline hover:underline">FAQ</a></li>
+                        <li><a href="/github" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">GitHub</a></li>
+                        <li><a href="/discord" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Discord</a></li>
+                        <li><a href="/contribuer" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Contribuer</a></li>
+                        <li><a href="/faq" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">FAQ</a></li>
                     </ul>
                 </div>
 
                 <div class="flex flex-col gap-2">
                     <h5 class="text-xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent">Légal</h5>
                     <ul class="space-y-2">
-                        <li><a href="/mentions-legales" class="text-white no-underline hover:underline">Mentions légales</a></li>
-                        <li><a href="/politique-de-confidentialite" class="text-white no-underline hover:underline">Politique de confidentialité</a></li>
-                        <li><a href="/conditions-d’utilisation" class="text-white no-underline hover:underline">Conditions d’utilisation</a></li>
-                        <li><a href="/cookies" class="text-white no-underline hover:underline">Cookies</a></li>
+                        <li><a href="/mentions-legales" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Mentions légales</a></li>
+                        <li><a href="/politique-de-confidentialite" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Politique de confidentialité</a></li>
+                        <li><a href="/conditions-d’utilisation" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Conditions d’utilisation</a></li>
+                        <li><a href="/cookies" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Cookies</a></li>
                     </ul>
                 </div>
             </div>
