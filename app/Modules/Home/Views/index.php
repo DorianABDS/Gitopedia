@@ -16,25 +16,18 @@
  */
 -->
 
-<div class="container mt-5">
-    <div class="row mt-4">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Fonctionnalité 1</h5>
-                    <p class="card-text">Description de la première fonctionnalité...</p>
-                    <a href="/feature1" class="btn btn-primary">En savoir plus</a>
-                </div>
+<section class="col-span-12 pt-40 h-screen">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-12 gap-6 items-center">
+        <div class="col-span-12 md:col-span-6 text-center md:text-left">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent">Apprenez Git de façon Intuitive</h1>
+            <p class="text-lg text-gray-300 mb-8">Progressez grâce à une documentation complète et des tutoriels adaptés, du niveau débutant à expert.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+                <a href="/documentation" class="bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] text-[#161618] font-bold py-3 px-6 rounded-md">Explorer les tutoriels</a>
+                <a href="/a-propos" class="bg-[#303034] text-white font-bold py-3 px-6 rounded-md">Consulter la documentation</a>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Fonctionnalité 2</h5>
-                    <p class="card-text">Description de la deuxième fonctionnalité...</p>
-                    <a href="/feature2" class="btn btn-primary">En savoir plus</a>
-                </div>
-            </div>
+        <div class="col-span-12 md:col-span-6 flex justify-end">
+            <img src="assets/img/logoGitopedia.png" alt="Logo Gitopedia" class="w-[500px] h-auto" />
         </div>
     </div>
-</div>
+</section>
