@@ -23,13 +23,13 @@
             Le fond sombre (bg-dark) et le texte blanc (text-white) créent
             un contraste visuel avec le reste de la page.
         -->
-<footer class="bg-[#303034] flex justify-center text-white mt-5 pt-10 pb-5 px-4 sm:px-6 lg:px-8">
-    <div class="container">
+<footer class="col-span-12 bg-[#303034] text-white pt-10 pb-5">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid gap-12 grid-cols-1 md:grid-cols-12 mb-20">
             <div class="md:col-span-4 flex flex-col items-center md:items-start text-center md:text-left">
                 <a href="/">
                     <div class="flex items-center mb-2">
-                        <img src="assets/img/logoGitpedia.png" alt="Logo Git" class="mx-3" />
+                        <img src="assets/img/logoGit.png" alt="Logo Git" class="mx-3" />
                         <h5 class="text-2xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent">Gitopedia</h5>
                     </div>
                 </a>
@@ -41,7 +41,7 @@
                     <h5 class="text-xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent">Ressources</h5>
                     <ul class="space-y-2">
                         <li><a href="/" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Accueil</a></li>
-                        <li><a href="/actualite" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Actualité</a></li>
+                        <li><a href="/news" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Actualité</a></li>
                         <li><a href="/documentation" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Documentation</a></li>
                         <li><a href="/contact" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">À propos</a></li>
                     </ul>
@@ -62,17 +62,17 @@
                     <ul class="space-y-2">
                         <li><a href="/github" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">GitHub</a></li>
                         <li><a href="/discord" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Discord</a></li>
-                        <li><a href="/contribuer" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Contribuer</a></li>
+                        <li><a href="/contribute" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Contribuer</a></li>
                         <li><a href="/faq" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">FAQ</a></li>
                     </ul>
                 </div>
 
                 <div class="flex flex-col gap-2">
-                    <h5 class="text-xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent">Légal</h5>
+                    <h5 class="text-xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent">Liens</h5>
                     <ul class="space-y-2">
-                        <li><a href="/mentions-legales" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Mentions légales</a></li>
-                        <li><a href="/politique-de-confidentialite" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Politique de confidentialité</a></li>
-                        <li><a href="/conditions-d’utilisation" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Conditions d’utilisation</a></li>
+                        <li><a href="/legal" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Mentions légales</a></li>
+                        <li><a href="/terms" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Conditions d'utilisation</a></li>
+                        <li><a href="/privacy" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Politique de confidentialité</a></li>
                         <li><a href="/cookies" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Cookies</a></li>
                     </ul>
                 </div>
@@ -87,6 +87,7 @@
         </div>
     </div>
 </footer>
+</div>
 
 <script src="/js/app.js"></script>
 
