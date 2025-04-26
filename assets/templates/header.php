@@ -15,7 +15,7 @@
   <?php endif; ?>
 </head>
 
-<body class="font-[Montserrat]">
+<body class="font-[Montserrat] bg-[#161618]">
   <header class="bg-[#303034] text-white px-4 sm:px-6 lg:px-12 py-6">
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
 
