@@ -19,8 +19,8 @@
   <header class="bg-[#303034] text-white px-4 sm:px-6 lg:px-12 py-6">
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
 
-      <a href="/">
-        <div class="md:col-span-4 flex items-center gap-3">
+      <a href="/" class="md:col-span-4 flex items-center gap-3">
+        <div class="md:col-span-4 flex items-center">
             <img src="logo.png" alt="Logo Git" class="h-8" />
             <span class="text-xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent">Gitopedia</span>
         </div>
