@@ -19,29 +19,15 @@
 <section class="col-span-12 pt-40 h-screen">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-12 gap-6 items-center">
         <div class="col-span-12 md:col-span-6 text-center md:text-left">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent">
-                Apprenez Git de façon Intuitive
-            </h1>
-            <p class="text-lg text-gray-300 mb-8">
-                Progressez grâce à une documentation complète et des tutoriels adaptés, du niveau débutant à expert.
-            </p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent">Apprenez Git de façon Intuitive</h1>
+            <p class="text-lg text-gray-300 mb-8">Progressez grâce à une documentation complète et des tutoriels adaptés, du niveau débutant à expert.</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
-                <a href="/documentation" class="bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] text-[#161618] font-bold py-3 px-6 rounded-md">
-                    Explorer les tutoriels
-                </a>
-                <a href="/a-propos" class="bg-[#303034] text-white font-bold py-3 px-6 rounded-md">
-                    Consulter la documentation
-                </a>
+                <a href="/documentation" class="bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] text-[#161618] font-bold py-3 px-6 rounded-md">Explorer les tutoriels</a>
+                <a href="/a-propos" class="bg-[#303034] text-white font-bold py-3 px-6 rounded-md">Consulter la documentation</a>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Fonctionnalité 2</h5>
-                    <p class="card-text">Description de la deuxième fonctionnalité...</p>
-                    <a href="/feature2" class="btn btn-primary">En savoir plus</a>
-                </div>
-            </div>
+        <div class="col-span-12 md:col-span-6 flex justify-end">
+            <img src="assets/img/logoGitopedia.png" alt="Logo Gitopedia" class="w-[500px] h-auto" />
         </div>
     </div>
 </section>
@@ -121,7 +107,7 @@
             <!-- Conteneur pour les cartes -->
             <div class="flex flex-wrap justify-center gap-6">
                 <!-- Carte 1 -->
-                <div class="w-96 mt-12 flex flex-col items-center h-full">
+                <div class="w-96 mt-12 flex flex-col items-center h-full transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
                     <div class="bg-gray-800 rounded-xl overflow-hidden shadow-[8px_8px_0_0_rgba(28,28,28,1)] w-full h-full">
                         <div class="p-6 flex flex-col h-full bg-[#303034]">
                             <!-- Icône + badge niveau -->
@@ -152,7 +138,7 @@
                 </div>
 
                 <!-- Carte 2 -->
-                <div class="w-96 flex flex-col items-center h-full">
+                <div class="w-96 flex flex-col items-center h-full transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
                     <div class="bg-gray-800 rounded-xl overflow-hidden shadow-[8px_8px_0_0_rgba(28,28,28,1)] w-full h-full">
                         <div class="p-6 flex flex-col h-full bg-[#303034]">
                             <!-- Icône + badge niveau -->
@@ -183,7 +169,7 @@
                 </div>
 
                 <!-- Carte 3 -->
-                <div class="w-96 mt-12 flex flex-col items-center h-full">
+                <div class="w-96 mt-12 flex flex-col items-center h-full transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
                     <div class="bg-gray-800 rounded-xl overflow-hidden shadow-[8px_8px_0_0_rgba(28,28,28,1)] w-full h-full">
                         <div class="p-6 flex flex-col h-full bg-[#303034]">
                             <!-- Icône + badge niveau -->
@@ -205,7 +191,7 @@
 
                             <!-- Pied de carte -->
                             <div class="flex justify-between items-center mt-auto">
-                                <a href="#" class="bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent font-semibold flex items-center">
+                                <a href="#" class="bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent font-medium flex items-center">
                                     Rejoindre la communauté
                                 </a>
                             </div>
@@ -215,4 +201,157 @@
             </div>
         </div>
     </section>
+
+    <!-- Section avec titre et sous-titre -->
+    <section>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <!-- Titre de la section -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-semibold text-white">Commencez dès maintenant</h2>
+                <p class="text-xl text-gray-400 mt-2">Choisissez votre niveau et plongez dans l'apprentissage de Git</p>
+            </div>
+
+            <!-- Conteneur cartes en ligne -->
+            <div class="flex flex-wrap justify-center gap-6">
+                <!-- Carte -->
+                <div class="w-96 transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-[8px_8px_0_0_rgba(28,28,28,1)] w-full h-full">
+                        <div class="p-6 flex flex-col h-full bg-[#303034]">
+                            <!-- Badge niveau -->
+                            <div class="flex items-center mb-4">
+                                <div class="font-semibold bg-[#198754] text-[#D3EDE4] text-sm px-3 py-1 rounded-full">
+                                    Débutant
+                                </div>
+                            </div>
+
+                            <!-- Titre -->
+                            <h2 class="text-xl font-bold text-white mb-3">Les bases de Git</h2>
+
+                            <!-- Description -->
+                            <p class="text-base text-[#A3A3A3] mb-5 flex-grow">
+                                Découvrez les commandes fondamentales et comprenez les concepts clés de Git.
+                            </p>
+
+                            <!-- Checklist -->
+                            <div class="flex text-white gap-2 mb-1">
+                                <img src="public/assets/img/check_green.svg" alt="" class="fill-[#D1EEE3]">
+                                <p>Installation et configuration</p>
+                            </div>
+                            <div class="flex text-white gap-2 mb-1">
+                                <img src="public/assets/img/check_green.svg" alt="">
+                                <p>Premiers commits</p>
+                            </div>
+                            <div class="flex text-white gap-2 mb-1">
+                                <img src="public/assets/img/check_green.svg" alt="">
+                                <p>Branches simples</p>
+                            </div>
+                            <div class="flex text-white gap-2 mb-1">
+                                <img src="public/assets/img/check_green.svg" alt="">
+                                <p>Utilisation de GitHub</p>
+                            </div>
+
+                            <!-- Bouton -->
+                            <div class="p-[2px] mt-5 rounded-lg bg-gradient-to-r from-[#A5A6FF] to-[#6264F0] inline-block">
+                                <button class="bg-[#303034] text-white rounded-lg px-4 py-2 w-full h-full">
+                                    Commencer le niveau Débutant
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-96 transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-[8px_8px_0_0_rgba(28,28,28,1)] w-full h-full">
+                        <div class="p-6 flex flex-col h-full bg-[#303034]">
+                            <!-- Badge niveau -->
+                            <div class="flex items-center mb-4">
+                                <div class="font-semibold bg-[#ED4E9D] text-[#F2DAEC] text-sm px-3 py-1 rounded-full">
+                                Avancé
+                                </div>
+                            </div>
+
+                            <!-- Titre -->
+                            <h2 class="text-xl font-bold text-white mb-3">Techniques avancées</h2>
+
+                            <!-- Description -->
+                            <p class="text-base text-[#A3A3A3] mb-5 flex-grow">
+                                Perfectionnez vos connaissances et apprenez des workflows professionnels.
+                            </p>
+
+                            <!-- Checklist -->
+                            <div class="flex text-white gap-2 mb-1">
+                                <img src="public/assets/img/check_pink.svg" alt="" class="fill-[#D1EEE3]">
+                                <p>Git interactive rebase</p>
+                            </div>
+                            <div class="flex text-white gap-2 mb-1">
+                                <img src="public/assets/img/check_pink.svg" alt="">
+                                <p>Git cherry-pick et reflog</p>
+                            </div>
+                            <div class="flex text-white gap-2 mb-1">
+                                <img src="public/assets/img/check_pink.svg" alt="">
+                                <p>Sous-modules Git</p>
+                            </div>
+                            <div class="flex text-white gap-2 mb-1">
+                                <img src="public/assets/img/check_pink.svg" alt="">
+                                <p>Git filter-branch</p>
+                            </div>
+
+                            <!-- Bouton -->
+                            <div class="p-[2px] mt-5 rounded-lg bg-gradient-to-r from-[#A5A6FF] to-[#6264F0] inline-block">
+                                <button class="bg-[#303034] text-white rounded-lg px-4 py-2 w-full h-full">
+                                    Commencer le niveau Avancé
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-96 transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-[8px_8px_0_0_rgba(28,28,28,1)] w-full h-full">
+                        <div class="p-6 flex flex-col h-full bg-[#303034]">
+                            <!-- Badge niveau -->
+                            <div class="flex items-center mb-4">
+                                <div class="font-semibold bg-[#DC3545] text-[#F4DBE0] text-sm px-3 py-1 rounded-full">
+                                    Expert
+                                </div>
+                            </div>
+
+                            <!-- Titre -->
+                            <h2 class="text-xl font-bold text-white mb-3">Maîtrise complète</h2>
+
+                            <!-- Description -->
+                            <p class="text-base text-[#A3A3A3] mb-5 flex-grow">
+                            Devenez un expert Git et optimisez vos workflows d'équipe.
+                            </p>
+
+                            <!-- Checklist -->
+                            <div class="flex text-white gap-2 mb-1">
+                                <img src="public/assets/img/check_red.svg" alt="" class="fill-[#D1EEE3]">
+                                <p>Git hooks et automatisation</p>
+                            </div>
+                            <div class="flex text-white gap-2 mb-1">
+                                <img src="public/assets/img/check_red.svg" alt="">
+                                <p>Reflog et récupération avancée</p>
+                            </div>
+                            <div class="flex text-white gap-2 mb-1">
+                                <img src="public/assets/img/check_red.svg" alt="">
+                                <p>Sous-modules et arbres</p>
+                            </div>
+                            <div class="flex text-white gap-2 mb-1">
+                                <img src="public/assets/img/check_red.svg" alt="">
+                                <p>Git en entreprise et CI/CD</p>
+                            </div>
+
+                            <!-- Bouton -->
+                            <div class="p-[2px] mt-5 rounded-lg bg-gradient-to-r from-[#A5A6FF] to-[#6264F0] inline-block">
+                                <button class="bg-[#303034] text-white rounded-lg px-4 py-2 w-full h-full">
+                                    Commencer le niveau Expert
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 </main>
