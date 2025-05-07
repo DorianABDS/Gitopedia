@@ -110,4 +110,109 @@
         </div>
     </section>
 
+    <section class="py-52">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <!-- Titre de la section -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-semibold text-white">Découvrez un apprentissage interactif et communautaire</h2>
+                <p class="text-xl text-gray-400 mt-2">Découvrez les contenus préférés de notre communauté</p>
+            </div>
+
+            <!-- Conteneur pour les cartes -->
+            <div class="flex flex-wrap justify-center gap-6">
+                <!-- Carte 1 -->
+                <div class="w-96 mt-12 flex flex-col items-center h-full">
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-[8px_8px_0_0_rgba(28,28,28,1)] w-full h-full">
+                        <div class="p-6 flex flex-col h-full bg-[#303034]">
+                            <!-- Icône + badge niveau -->
+                            <div class="flex items-center mb-4">
+                                <div class="bg-[#676CF2] p-4 rounded-lg">
+                                    <img src="/public/assets/img/level.svg" alt="icon de niveau" class="w-8 h-8">
+                                </div>
+                            </div>
+
+                            <!-- Titre de la carte -->
+                            <h2 class="text-xl font-bold text-white mb-3">
+                                Progression par niveau
+                            </h2>
+
+                            <!-- Description -->
+                            <p class="text-base text-[#A3A3A3] mb-5 flex-grow">
+                                Des parcours d'apprentissage adaptés à tous, du débutant à l'expert, avec des exemples concrets à chaque étape.
+                            </p>
+
+                            <!-- Pied de carte -->
+                            <div class="flex justify-between items-center mt-auto">
+                                <a href="#" class="bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent font-semibold flex items-center">
+                                    Voir les parcours
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carte 2 -->
+                <div class="w-96 flex flex-col items-center h-full">
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-[8px_8px_0_0_rgba(28,28,28,1)] w-full h-full">
+                        <div class="p-6 flex flex-col h-full bg-[#303034]">
+                            <!-- Icône + badge niveau -->
+                            <div class="flex items-center mb-4">
+                                <div class="bg-[#ED4E9D] p-4 rounded-lg">
+                                    <img src="/public/assets/img/material-symbols_code.svg" alt="icon symbol code" class="w-8 h-8">
+                                </div>
+                            </div>
+
+                            <!-- Titre de la carte -->
+                            <h2 class="text-xl font-bold text-white mb-3">
+                                Exemples interactifs
+                            </h2>
+
+                            <!-- Description -->
+                            <p class="text-base text-[#A3A3A3] mb-5 flex-grow">
+                                Pratiquez Git directement dans votre navigateur avec nos exemples interactifs et visualisez les résultats en temps réel.
+                            </p>
+
+                            <!-- Pied de carte -->
+                            <div class="flex justify-between items-center mt-auto">
+                                <a href="#" class="bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent font-semibold flex items-center">
+                                    Essayer maintenant
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carte 3 -->
+                <div class="w-96 mt-12 flex flex-col items-center h-full">
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-[8px_8px_0_0_rgba(28,28,28,1)] w-full h-full">
+                        <div class="p-6 flex flex-col h-full bg-[#303034]">
+                            <!-- Icône + badge niveau -->
+                            <div class="flex items-center mb-4">
+                                <div class="bg-[#08B8D6] p-4 rounded-lg">
+                                    <img src="/public/assets/img/users.svg" alt="icon d'utilisateurs" class="w-8 h-8">
+                                </div>
+                            </div>
+
+                            <!-- Titre de la carte -->
+                            <h2 class="text-xl font-bold text-white mb-3">
+                                Communauté active
+                            </h2>
+
+                            <!-- Description -->
+                            <p class="text-base text-[#A3A3A3] mb-5 flex-grow">
+                                Rejoignez des développeurs passionnés, partagez vos connaissances et obtenez de l'aide sur Git.
+                            </p>
+
+                            <!-- Pied de carte -->
+                            <div class="flex justify-between items-center mt-auto">
+                                <a href="#" class="bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent font-semibold flex items-center">
+                                    Rejoindre la communauté
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
