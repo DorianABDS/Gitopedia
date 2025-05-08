@@ -22,15 +22,14 @@
 <body class="font-[Montserrat] bg-[#161618]">
     <div class="grid grid-cols-12 gap-6">
 
-        <!-- En-tête -->
-        <header class="col-span-12 bg-[#303034] text-white py-6 fixed w-full z-50">
+        <header class="col-span-12 bg-[#161618] text-white py-4 fixed w-full z-50 border-b border-[#303034]">
             <div class="container mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">
-                <a href="/" class="flex items-center gap-3">
+                <a href="/" class="flex items-center gap-3 transition-all duration-200 transform hover:scale-[1.03] active:scale-[0.95]">
                     <img src="assets/img/logoGit.png" alt="Logo Git" class="h-8" />
                     <span class="text-xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent">Gitopedia</span>
                 </a>
                 <nav>
-                    <ul class="flex gap-6 font-semibold">
+                    <ul class="flex gap-6 font-medium">
                         <li><a href="/" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Accueil</a></li>
                         <li><a href="/actualite" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Actualité</a></li>
                         <li><a href="/documentation" class="hover:text-transparent hover:bg-gradient-to-l hover:from-[#A5A6FF] hover:to-[#6264F0] hover:bg-clip-text hover:underline">Documentation</a></li>
@@ -38,8 +37,14 @@
                     </ul>
                 </nav>
                 <div class="flex gap-3">
-                    <button class="bg-[#303034] text-[#fff] font-bold px-4 py-1.5 rounded-md">Connexion</button>
-                    <button class="bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] text-[#161618] font-bold px-4 rounded-md">Inscription</button>
+                    <a href="#" class="bg-[#303034] text-white font-semibold px-4 py-1.5 rounded-md transition-all duration-200 transform hover:scale-[1.03] active:scale-[0.95]">
+                        Connexion
+                    </a>
+                    <a href="#" class="bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] text-[#161618] font-semibold px-4 py-1.5 rounded-md transition-all duration-200 transform hover:scale-[1.03] active:scale-[0.95]">
+                        Inscription
+                    </a>
                 </div>
+
+
             </div>
         </header>
