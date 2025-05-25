@@ -23,98 +23,72 @@
             Le fond sombre (bg-dark) et le texte blanc (text-white) créent
             un contraste visuel avec le reste de la page.
         -->
-        <footer class="bg-[#303034] text-white mt-5 py-5">
-            <div class="container">
-                <div class="row mb-4">
-                    <!-- Nom et description du site -->
-                    <div class="col-md-4">
-                        <div class="flex">
-                            <img src="assets/img/logoGitopedia.png" alt="Logo Gitopedia" class="mx-3">
-                            <h5 class="text-2xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent" style="-webkit-text-fill-color: transparent;">Gitopedia</h5>
-                        </div>
-                        <p>Une plateforme dédiée à l'apprentissage de Git, du débutant à l'expert, avec des exemples concrets et une approche pédagogique moderne.</p> 
-                        <!-- Ou alors cette phrase: "Gitopedia: Parce que git `commit -m 'help'` ne fonctionne pas." -->
-                    </div>
-                    
-                    <!-- liens de navigation ressources -->
-                    <div class="col-md-2">
-                    <h5 class="text-2xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent" style="-webkit-text-fill-color: transparent;" >Ressources</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="/" class="text-white !no-underline">Accueil</a></li>
-                            <li><a href="/documentation" class="text-white !no-underline">Documentation</a></li>
-                            <li><a href="/contact" class="text-white !no-underline">À propos</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- liens de navigation niveaux -->
-                    <div class="col-md-2">
-                        <h5 class="text-2xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent" style="-webkit-text-fill-color: transparent;">Niveaux</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="/debutant" class="text-white !no-underline">Débutant</a></li>
-                            <li><a href="/intermediaire" class="text-white !no-underline">Intermédiaire</a></li>
-                            <li><a href="/avance" class="text-white !no-underline">Avancé</a></li>
-                            <li><a href="/expert" class="text-white !no-underline">Expert</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- liens de navigation communauté -->
-                    <div class="col-md-2">
-                        <h5 class="text-2xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent" style="-webkit-text-fill-color: transparent;">Communauté</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="/github" class="text-white !no-underline">GitHub</a></li>
-                            <li><a href="/discord" class="text-white !no-underline">Discord</a></li>
-                            <li><a href="/contribuer" class="text-white !no-underline">Contribuer</a></li>
-                            <li><a href="/faq" class="text-white !no-underline">FAQ</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- liens de navigation légal -->
-                    <div class="col-md-2">
-                        <h5 class="text-2xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent" style="-webkit-text-fill-color: transparent;">Légal</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="/mentions-legales" class="text-white !no-underline">Mentions légales</a></li>
-                            <li><a href="/politique-de-confidentialite" class="text-white !no-underline">Politique de confidentialité</a></li>
-                            <li><a href="/conditions-d’utilisation" class="text-white !no-underline">Conditions d’utilisation</a></li>
-                            <li><a href="/cookies" class="text-white !no-underline">Cookies</a></li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Colonne de droite : ressources et liens externes -->
-                    <!-- <div class="col-md-3">
-                        <h5>Ressources</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="/docs" class="text-white">Documentation</a></li>
-                            <li><a href="https://github.com/yourusername/gitopedia" class="text-white">GitHub</a></li>
-                        </ul>
-                    </div> -->
-
+<footer class="bg-[#303034] flex justify-center text-white mt-5 pt-10 pb-5 px-4 sm:px-6 lg:px-8">
+    <div class="container">
+        <div class="grid gap-12 grid-cols-1 md:grid-cols-12 mb-20">
+            <div class="md:col-span-4 flex flex-col items-center md:items-start text-center md:text-left">
+                <div class="flex items-center mb-2">
+                    <img src="assets/img/logoGitpedia.png" alt="Logo Gitopedia" class="mx-3" />
+                    <h5 class="text-2xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent">Gitopedia</h5>
                 </div>
-                
-                <!-- Séparateur horizontal -->
-                <hr class="border-0 h-0.5 bg-gradient-to-l from-[#A5A6FF] to-[#6264F0]">
-                
-                <!-- 
-                    Copyright dynamique avec l'année courante
-                    L'expression PHP date('Y') insère automatiquement l'année actuelle,
-                    évitant ainsi d'avoir à mettre à jour manuellement cette information.
-                -->
-                <div class="flex place-content-between mt-4">
-                    <p class="">&copy; <?= date('Y') ?> Gitopedia. Tous droits réservés.</p>
-                    <p class="">Conçu avec ❤️ pour la communauté des développeurs</p>
+                <p>Parce que git <code>`commit -m 'help'`</code> ne fonctionne pas.</p>
+            </div>
+
+            <div class="md:col-span-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent">Ressources</h5>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-white no-underline hover:underline">Accueil</a></li>
+                        <li><a href="/actualite" class="text-white no-underline hover:underline">Actualité</a></li>
+                        <li><a href="/documentation" class="text-white no-underline hover:underline">Documentation</a></li>
+                        <li><a href="/contact" class="text-white no-underline hover:underline">À propos</a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent">Niveaux</h5>
+                    <ul class="space-y-2">
+                        <li><a href="/debutant" class="text-white no-underline hover:underline">Débutant</a></li>
+                        <li><a href="/intermediaire" class="text-white no-underline hover:underline">Intermédiaire</a></li>
+                        <li><a href="/avance" class="text-white no-underline hover:underline">Avancé</a></li>
+                        <li><a href="/expert" class="text-white no-underline hover:underline">Expert</a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent">Communauté</h5>
+                    <ul class="space-y-2">
+                        <li><a href="/github" class="text-white no-underline hover:underline">GitHub</a></li>
+                        <li><a href="/discord" class="text-white no-underline hover:underline">Discord</a></li>
+                        <li><a href="/contribuer" class="text-white no-underline hover:underline">Contribuer</a></li>
+                        <li><a href="/faq" class="text-white no-underline hover:underline">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <h5 class="text-xl font-bold bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent">Légal</h5>
+                    <ul class="space-y-2">
+                        <li><a href="/mentions-legales" class="text-white no-underline hover:underline">Mentions légales</a></li>
+                        <li><a href="/politique-de-confidentialite" class="text-white no-underline hover:underline">Politique de confidentialité</a></li>
+                        <li><a href="/conditions-d’utilisation" class="text-white no-underline hover:underline">Conditions d’utilisation</a></li>
+                        <li><a href="/cookies" class="text-white no-underline hover:underline">Cookies</a></li>
+                    </ul>
                 </div>
             </div>
-        </footer>
+        </div>
 
-        <!-- 
-            Tailwind
-        -->
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <!-- 
-            JavaScript personnalisé de l'application
-            Contient les scripts spécifiques au site (validations, interactions, etc.)
-        -->
-        <script src="/js/app.js"></script>
+        <hr class="border-0 h-0.5 bg-gradient-to-l from-[#A5A6FF] to-[#6264F0]" />
 
+        <div class="flex flex-col md:flex-row justify-between items-center mt-5 text-sm text-center md:text-left">
+            <p>&copy; <?= date('Y') ?> Gitopedia. Tous droits réservés.</p>
+            <p>Conçu avec ❤️ pour la communauté des développeurs</p>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/app.js"></script>
+
+<!-- 
 <!-- 
             Inclusions JavaScript conditionnelles
             Permet d'ajouter des scripts spécifiques à certaines pages uniquement
