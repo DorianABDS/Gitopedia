@@ -37,10 +37,10 @@
                     </ul>
                 </nav>
                 <div class="flex gap-3">
-                    <a href="#" class="bg-[#303034] text-white font-semibold px-4 py-1.5 rounded-md transition-all duration-200 transform hover:scale-[1.03] active:scale-[0.95]">
+                    <a href="/connexion" class="bg-[#303034] text-white font-semibold px-4 py-1.5 rounded-md transition-all duration-200 transform hover:scale-[1.03] active:scale-[0.95]">
                         Connexion
                     </a>
-                    <a href="#" class="bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] text-[#161618] font-semibold px-4 py-1.5 rounded-md transition-all duration-200 transform hover:scale-[1.03] active:scale-[0.95]">
+                    <a href="/inscription" class="bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] text-[#161618] font-semibold px-4 py-1.5 rounded-md transition-all duration-200 transform hover:scale-[1.03] active:scale-[0.95]">
                         Inscription
                     </a>
                 </div>
