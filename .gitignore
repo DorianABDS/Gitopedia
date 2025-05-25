@@ -1,3 +1,25 @@
 # Ignore Windows Zone.Identifier files
 *:Zone.Identifier
 *Zone.Identifier
+
+# Node modules (ne jamais versionner)
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environnement local
+.env
+.env.local
+.env.*.local
+
+# Lockfiles (facultatif si tu veux garder un lock unique)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
