@@ -1,3 +1,20 @@
 # Ignore Windows Zone.Identifier files
 *:Zone.Identifier
 *Zone.Identifier
+
+# Node.js dependencies
+node_modules/
+
+# Output directories
+/dist/
+/public/css/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Miscellaneous
+*.env
