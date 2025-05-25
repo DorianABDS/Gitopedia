@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
+
+@layer components {
+  .test-border {
+    @apply border border-red-500;
+  }
+
+  .btn-gradient-purple {
+    @apply bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] text-[#161618] font-semibold px-4 py-1.5 rounded-md transition-all duration-200 transform hover:scale-[1.03] active:scale-[0.95];
+  }
+}
+
 @tailwind utilities;

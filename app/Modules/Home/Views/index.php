@@ -191,7 +191,7 @@
 
                             <!-- Pied de carte -->
                             <div class="flex justify-between items-center mt-auto">
-                                <a href="#" class="bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent font-medium flex items-center">
+                                <a href="#" class="bg-gradient-to-l from-[#A5A6FF] to-[#6264F0] bg-clip-text text-transparent font-semibold flex items-center">
                                     Rejoindre la communauté
                                 </a>
                             </div>
