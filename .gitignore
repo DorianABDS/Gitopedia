@@ -2,24 +2,19 @@
 *:Zone.Identifier
 *Zone.Identifier
 
-# Node modules (ne jamais versionner)
+# Node.js dependencies
 node_modules/
 
-# Build outputs
-dist/
-build/
+# Output directories
+/dist/
+/public/css/
 
 # Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+*.log
 
-# Environnement local
-.env
-.env.local
-.env.*.local
+# OS files
+.DS_Store
+Thumbs.db
 
-# Lockfiles (facultatif si tu veux garder un lock unique)
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
+# Miscellaneous
+*.env
